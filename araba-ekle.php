@@ -58,18 +58,18 @@ include("connect.php"); // veritabanı bağlantımızı sayfamıza ekliyoruz.
 
        <?php
 
-                    if ($_POST) { // You can check if there are posts on the page.
+                    if ($_POST) {
 
 
                        $plaka = $_POST['plaka'];
-//$resim = $_POST['resim'];
+                       //$resim = $_POST['resim'];
                     //   $yer = $_POST['yer'];
 
 
 
 
                          if ($baglanti->query("INSERT INTO otoparkmusteri (plaka,resim ) VALUES ('$plaka','$yeniresimadi')"))  {
-                                 echo "eklendi başarılı çalışkan kızlar sizi :)";
+                                 
                          }
                            else {
                                echo "Hata oluştu"; }

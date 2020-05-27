@@ -19,7 +19,7 @@
   var vp=0;
   var dx=5;
   var dy=5;
-   // window.addEventListener('keydown', moveCar, true);
+
    var canvas =document.getElementById("canvas");
    var ctx=canvas.getContext("2d");
    ctx.moveTo(100,0);
@@ -268,23 +268,6 @@
       }
  }
       setInterval( araba,50,"<?php echo $sonuc['yer']; ?>","100");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   </script>

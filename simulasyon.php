@@ -6,13 +6,13 @@
 <?php
 
 $sorgu = $baglanti->query("SELECT * FROM otoparkmusteri WHERE id =".(int)$_GET['id']);
-//id değeri ile düzenlenecek verileri veritabanından alacak sorgu
+
 
 $sonuc = $sorgu->fetch_assoc();
 
 $yer = $sonuc['yer'];
 
-// While döngüsü ile verileri sıralayacağız. Burada PHP tagını kapatarak tırnaklarla uğraşmadan tekrarlatabiliriz.
+
 ?>
 
 
@@ -51,7 +51,7 @@ $yer = $sonuc['yer'];
         var vp=0;
         var dx=5;
         var dy=5;
-         // window.addEventListener('keydown', moveCar, true);
+
          var canvas =document.getElementById("canvas");
          var ctx=canvas.getContext("2d");
          ctx.moveTo(100,0);
@@ -300,23 +300,6 @@ $yer = $sonuc['yer'];
             }
        }
             setInterval( araba,50,"<?php echo $sonuc['yer']; ?>","100");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </script>

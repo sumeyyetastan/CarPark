@@ -42,11 +42,11 @@
 
    </tr>
 
-<!-- Şimdi ise verileri sıralayarak çekmek için PHP kodlamamıza geçiyoruz. -->
+
 
 <?php
 
-$sorgu = $baglanti->query("SELECT * FROM otoparkmusteri WHERE id =".(int)$_GET['id']);// Makale tablosundaki tüm verileri çekiyoruz.
+$sorgu = $baglanti->query("SELECT * FROM otoparkmusteri WHERE id =".(int)$_GET['id']);
 
 while ($sonuc = $sorgu->fetch_assoc()) {
 
@@ -54,7 +54,7 @@ while ($sonuc = $sorgu->fetch_assoc()) {
 $resim = $sonuc['resim'];
 
 
-// While döngüsü ile verileri sıralayacağız. Burada PHP tagını kapatarak tırnaklarla uğraşmadan tekrarlatabiliriz.
+
 ?>
 
 
@@ -68,7 +68,6 @@ $resim = $sonuc['resim'];
    </tr>
 <?php
 }
-// Tekrarlanacak kısım bittikten sonra PHP tagının içinde while döngüsünü süslü parantezi kapatarak sonlandırıyoruz.
 ?>
 
 </table>
@@ -86,19 +85,19 @@ $resim = $sonuc['resim'];
 
 if ($_POST) { // Post olup olmadığını kontrol ediyoruz.
 
-    $yer = $_POST['yer']; // Post edilen değerleri değişkenlere aktarıyoruz
+    $yer = $_POST['yer'];
 
 
 
         if ($baglanti->query("UPDATE otoparkmusteri SET yer = '$yer' WHERE id =".$_GET['id'])){
 
            header("location:parkarabalar.php");
-            // Eğer güncelleme sorgusu çalıştıysa ekle.php sayfasına yönlendiriyoruz.
+
         }
 
         else
         {
-          echo "Hata oluştu"; // id bulunamadıysa veya sorguda hata varsa hata yazdırıyoruz.
+          echo "Hata oluştu";
         }
 
 }

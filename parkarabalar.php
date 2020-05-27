@@ -16,7 +16,7 @@
 
    </tr>
 
-<!-- Şimdi ise verileri sıralayarak çekmek için PHP kodlamamıza geçiyoruz. -->
+
 
 <?php
 
@@ -34,7 +34,7 @@ $yer = $sonuc['yer'];
 
 
    <tr>
-       <td><?php echo $id; // Yukarıda tanıttığımız gibi alanları dolduruyoruz. ?></td>
+       <td><?php echo $id;  ?></td>
        <td><?php echo $plaka; ?></td>
        <td><?php echo $yer; ?></td>
        <td>		<div class="post-thumbnail single-thumbnail"><img src="resimler/<?php echo $resim;?>" width="200" height="150" alt="<?php echo $sonuc['resim'];?>" class="gp-post-image">
